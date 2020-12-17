@@ -17,17 +17,17 @@ public class UserEntity implements Serializable {
 	@GeneratedValue
 	private long id;
 
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private String userId;
-	@Column(nullable=false, length=100)
+	@Column(nullable = false, length = 100)
 	private String firstName;
-	@Column(nullable=false, length=100)
+	@Column(nullable = false, length = 100)
 	private String lastName;
-	@Column(nullable=false, length=100)
+	@Column(nullable = false, length = 100)
 	private String email;
-	@Column(nullable=false, length=5)
+	@Column(nullable = false, length = 5)
 	private int age;
-	@Column(nullable=false, length=100)
+	@Column(nullable = false, length = 100)
 	private String encryptedPassword;
 
 	public long getId() {
