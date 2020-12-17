@@ -20,3 +20,6 @@ spring.datasource.password=mcleod_software
 spring.datasource.url=jdbc:mysql://localhost:3306/mcleod_software
 spring.jpa.hibernate.ddl-auto=update
 ```
+
+#### BeanUtils.copyProperties(userDetails, userDto);
+Copy the Property values of the given source into the target source.
