@@ -1,5 +1,7 @@
 package com.mshakir.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import com.mshakir.service.UserService;
 import com.mshakir.shared.dto.UserDto;
 
