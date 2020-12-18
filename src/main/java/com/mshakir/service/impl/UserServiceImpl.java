@@ -100,4 +100,14 @@ public class UserServiceImpl implements UserService {
 		return returnValue;
 	}
 
+	@Override
+	public UserDto getUserByUserId(String userId) throws Exception {
+		UserDto returnValue = new UserDto();
+		UserEntity userEntity = userRepository.findByUserId(userId);
+		// Check if it is not null first
+		if (userEntity == null) throw new Exception("No User Found");
+		BeanUtils.copyProperties(userEntity, returnValue);
+		return returnValue;
+	}
+
 }

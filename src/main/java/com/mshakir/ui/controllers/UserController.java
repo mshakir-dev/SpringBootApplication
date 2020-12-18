@@ -24,11 +24,15 @@ public class UserController {
 	UserService userService;
 	
 	
-	@GetMapping
-	public String getUsers() {
-		return "Get List";
+	@GetMapping(path="/{userId}")
+	public UserRest getUsers(@PathVariable String userId) throws Exception{
+		UserRest returnValue = new UserRest();
+		
+		UserDto userDto = userService.getUserByUserId(userId);
+		BeanUtils.copyProperties(userDto, returnValue);
+		return returnValue;
 	}
-	
+	 
 	
 	@PostMapping
 	public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) throws Exception{
