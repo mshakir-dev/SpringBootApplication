@@ -7,6 +7,9 @@ import com.mshakir.entity.UserEntity;
 
 @Repository
 public interface UserRepository extends CrudRepository<UserEntity, Long> {
+	
 	// Custom that We need to add it in our Application to perform extra Crud Functionality
 	UserEntity findUserByEmail(String email);
+	// Find User By User Id which Is the random number
+	UserEntity findByUserId(String userId);
 }
