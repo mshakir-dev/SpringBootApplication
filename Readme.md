@@ -23,3 +23,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 #### BeanUtils.copyProperties(userDetails, userDto);
 Copy the Property values of the given source into the target source.
+
+> Validate Password Using Regular Expression.
+> Check The UserFirstName is Scott Based on that Update the Database Column
+> Throw RunTimeException, Exception
