@@ -30,7 +30,7 @@ public class UserController {
 	
 	
 	@PostMapping
-	public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) {
+	public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) throws Exception{
 		UserRest returnValue = new UserRest();
 		UserDto userDto = new UserDto();
 		BeanUtils.copyProperties(userDetails, userDto);

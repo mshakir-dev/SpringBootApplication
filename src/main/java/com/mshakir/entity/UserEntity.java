@@ -29,6 +29,7 @@ public class UserEntity implements Serializable {
 	private int age;
 	@Column(nullable = false, length = 100)
 	private String encryptedPassword;
+	private String coolStatus;
 
 	public long getId() {
 		return id;
@@ -84,6 +85,21 @@ public class UserEntity implements Serializable {
 
 	public void setEncryptedPassword(String encryptedPassword) {
 		this.encryptedPassword = encryptedPassword;
+	}
+
+	public String getCoolStatus() {
+		return coolStatus;
+	}
+
+	public void setCoolStatus(String coolStatus) {
+		this.coolStatus = coolStatus;
+	}
+
+	@Override
+	public String toString() {
+		return "UserEntity [id=" + id + ", userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", email=" + email + ", age=" + age + ", encryptedPassword=" + encryptedPassword + ", coolStatus="
+				+ coolStatus + "]";
 	}
 
 }
