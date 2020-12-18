@@ -54,6 +54,8 @@ public class UserServiceImpl implements UserService {
 		return returnValue;
 	}
 
+	// Method to Check If the Password Contains (J), (k), and (minimum eight letters).
+	// Used Regular Expression
 	public static boolean isValidPassword(String password) {
 
 		String regex = "^(?=.*[J])" + "(?=.*[k])" + ".{8,100}$";
